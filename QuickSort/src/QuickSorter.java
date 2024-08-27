@@ -15,4 +15,11 @@ public class QuickSorter {
 //        sortCategory(categorizedChars.getSpecialCharacters());
         return combineSortedCategories(categorizedChars);
     }
+    private String combineSortedCategories(CategorizedCharacters chars) {
+        StringBuilder sortedString = new StringBuilder();
+        for (char[] chars1 : Arrays.asList(chars.getLowercase(), chars.getUppercase(), chars.getDigits(), chars.getSpecialCharacters())) {
+            sortedString.append(chars1);
+        }
+        return sortedString.toString();
+    }
 }
