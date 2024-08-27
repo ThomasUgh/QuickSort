@@ -25,9 +25,10 @@ public class StringCategorizer {
     }
 
     private char[] convertListToArray(List<Character> list) {
-        char[] array = new char[list.size()];
-        for (int i = 0; i < list.size(); i++) {
-            array[i] = list.get(i);
+        var array = new char[list.size()];
+        var index = 0;
+        for (Character c : list) {
+            array[index++] = c;
         }
         return array;
     }
