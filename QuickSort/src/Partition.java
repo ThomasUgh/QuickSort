@@ -1,8 +1,8 @@
 public class Partition {
 
     public static int partition(char[] array, int low, int high) {
-        char pivot = array[high];
-        int i = low - 1;
+        var pivot = array[high];
+        var i = low - 1;
         for (int j = low; j < high; j++) {
             if (array[j] <= pivot) {
                 i++;
@@ -13,4 +13,9 @@ public class Partition {
         return i + 1;
     }
 
+    private static void swap(char[] array, int i, int j) {
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
