@@ -20,6 +20,15 @@ public class StringCategorizer {
                 specialCharacters.add(c);
             }
         }
+
+        return new CategorizedCharacters(convertListToArray(lowercase), convertListToArray(uppercase), convertListToArray(digits), convertListToArray(specialCharacters));
     }
+
+    private char[] convertListToArray(List<Character> list) {
+        char[] array = new char[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            array[i] = list.get(i);
+        }
+        return array;
     }
 }
